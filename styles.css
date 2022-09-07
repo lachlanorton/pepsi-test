@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.promotion {
+    display: flex;
+    align-items: center;
+    background-color: #004B93;
+    color: white;
+    font-family: sans-serif;
+    padding: 50px 50px 50px 20px;
+    margin: 100px auto;
+    width: 80%;
+    border-radius: 25px;
+}
+
+.promotion:hover {
+    animation: colourchange 1000ms;   
+}
+
+.can {
+    background-color: #004B93;
+}
+
+.can:hover {
+    animation: cansize 1000ms;
+}
+
+@keyframes colourchange {
+    0% {
+        background-color: #004B93;
+    }
+    
+    100% {
+        background-color: #C9002B;
+    }
+}
+
+@keyframes cansize {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(1.25, 1.25);
+    }
+}
