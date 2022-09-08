@@ -1,33 +1,41 @@
 * {
     box-sizing: border-box;
+}
+
+body {
     background-color: black;
 }
 
-.promotion {
+section {
     display: flex;
     align-items: center;
     background-color: #004B93;
     color: white;
     font-family: sans-serif;
-    padding: 50px 50px 50px 20px;
-    margin: 100px auto;
+    font-size: 24px;
+    padding: 50px;
+    margin: 200px auto;
     width: 80%;
+    max-width: 500px;
     border-radius: 25px;
+    animation: colourchangeOUT 1000ms;   
 }
 
-.promotion:hover {
-    animation: colourchange 1000ms;   
+img {
+    margin-left: 50px;
+    width: 20%;
+    animation: cansizeOUT 1000ms;
 }
 
-.can {
-    background-color: #004B93;
+section:hover {
+    animation: colourchangeIN 1000ms forwards;   
 }
 
-.can:hover {
-    animation: cansize 1000ms;
+section:hover img {
+    animation: cansizeIN 1000ms forwards;
 }
 
-@keyframes colourchange {
+@keyframes colourchangeIN {
     0% {
         background-color: #004B93;
     }
@@ -37,12 +45,32 @@
     }
 }
 
-@keyframes cansize {
+@keyframes colourchangeOUT {
+    0% {
+        background-color: #C9002B;
+    }
+    
+    100% {
+        background-color: #004B93;
+    }
+}
+
+@keyframes cansizeIN {
     0% {
         transform: scale(1, 1);
     }
 
     100% {
-        transform: scale(1.25, 1.25);
+        transform: scale(1.75, 1.75);
+    }
+}
+
+@keyframes cansizeOUT {
+    0% {
+        transform: scale(1.75, 1.75);
+    }
+
+    100% {
+        transform: scale(1, 1);
     }
 }
